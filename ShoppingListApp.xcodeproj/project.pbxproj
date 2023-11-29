@@ -21,6 +21,11 @@
 		F1B6699A2B17EF77004D6BCC /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669992B17EF77004D6BCC /* ButtonSize.swift */; };
 		F1B6699C2B17EFB4004D6BCC /* RadiusSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6699B2B17EFB4004D6BCC /* RadiusSize.swift */; };
 		F1B6699F2B17F8DE004D6BCC /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6699E2B17F8DE004D6BCC /* OnBoardView.swift */; };
+		F1B669A32B17FBF3004D6BCC /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669A22B17FBF3004D6BCC /* TabBarVC.swift */; };
+		F1B669A82B17FC28004D6BCC /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669A72B17FC28004D6BCC /* SettingsVC.swift */; };
+		F1B669AA2B17FC37004D6BCC /* ShoppingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669A92B17FC37004D6BCC /* ShoppingListVC.swift */; };
+		F1B669AC2B17FC44004D6BCC /* DoneListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669AB2B17FC44004D6BCC /* DoneListVC.swift */; };
+		F1B669AE2B17FED5004D6BCC /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669AD2B17FED5004D6BCC /* SFSymbols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		F1B669992B17EF77004D6BCC /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
 		F1B6699B2B17EFB4004D6BCC /* RadiusSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusSize.swift; sourceTree = "<group>"; };
 		F1B6699E2B17F8DE004D6BCC /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
+		F1B669A22B17FBF3004D6BCC /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		F1B669A72B17FC28004D6BCC /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = ShoppingListApp/Feature/Settings/SettingsVC.swift; sourceTree = SOURCE_ROOT; };
+		F1B669A92B17FC37004D6BCC /* ShoppingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListVC.swift; sourceTree = "<group>"; };
+		F1B669AB2B17FC44004D6BCC /* DoneListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListVC.swift; sourceTree = "<group>"; };
+		F1B669AD2B17FED5004D6BCC /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,10 @@
 		F14493F82B17E07900382587 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F1B669A62B17FC0F004D6BCC /* Settings */,
+				F1B669A52B17FC09004D6BCC /* DoneList */,
+				F1B669A42B17FBFD004D6BCC /* ShoppingList */,
+				F1B669A02B17FB33004D6BCC /* TabBar */,
 				F14493F92B17E07F00382587 /* OnBoard */,
 			);
 			path = Feature;
@@ -123,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F14494032B17E88500382587 /* LottieConstants.swift */,
+				F1B669AD2B17FED5004D6BCC /* SFSymbols.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -150,6 +165,38 @@
 				F1B6699E2B17F8DE004D6BCC /* OnBoardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F1B669A02B17FB33004D6BCC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F1B669A22B17FBF3004D6BCC /* TabBarVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		F1B669A42B17FBFD004D6BCC /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				F1B669A92B17FC37004D6BCC /* ShoppingListVC.swift */,
+			);
+			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		F1B669A52B17FC09004D6BCC /* DoneList */ = {
+			isa = PBXGroup;
+			children = (
+				F1B669AB2B17FC44004D6BCC /* DoneListVC.swift */,
+			);
+			path = DoneList;
+			sourceTree = "<group>";
+		};
+		F1B669A62B17FC0F004D6BCC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F1B669A72B17FC28004D6BCC /* SettingsVC.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,10 +283,15 @@
 				F14493FB2B17E08C00382587 /* OnBoardVC.swift in Sources */,
 				F14493E02B17DFD600382587 /* AppDelegate.swift in Sources */,
 				F14494042B17E88500382587 /* LottieConstants.swift in Sources */,
+				F1B669AA2B17FC37004D6BCC /* ShoppingListVC.swift in Sources */,
+				F1B669AE2B17FED5004D6BCC /* SFSymbols.swift in Sources */,
+				F1B669A32B17FBF3004D6BCC /* TabBarVC.swift in Sources */,
+				F1B669AC2B17FC44004D6BCC /* DoneListVC.swift in Sources */,
 				F1B6699F2B17F8DE004D6BCC /* OnBoardView.swift in Sources */,
 				F14493E22B17DFD600382587 /* SceneDelegate.swift in Sources */,
 				F1B669972B17EE0B004D6BCC /* UIFont+Ext.swift in Sources */,
 				F1B6699C2B17EFB4004D6BCC /* RadiusSize.swift in Sources */,
+				F1B669A82B17FC28004D6BCC /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,8 @@ final class OnBoardVC: UIViewController {
 
 extension OnBoardVC: OnBoardViewProtocol {
     func onTappedStartButton() {
-        print("Start Button Tapped")
+        navigationController?.pushViewController(TabBarVC(), animated: true)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
