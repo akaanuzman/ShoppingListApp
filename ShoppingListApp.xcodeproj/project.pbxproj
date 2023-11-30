@@ -105,10 +105,10 @@
 		F14493F82B17E07900382587 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F1B669A02B17FB33004D6BCC /* TabBar */,
 				F1B669A62B17FC0F004D6BCC /* Settings */,
 				F1B669A52B17FC09004D6BCC /* DoneList */,
 				F1B669A42B17FBFD004D6BCC /* ShoppingList */,
-				F1B669A02B17FB33004D6BCC /* TabBar */,
 				F14493F92B17E07F00382587 /* OnBoard */,
 			);
 			path = Feature;
