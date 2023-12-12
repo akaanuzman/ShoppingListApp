@@ -15,4 +15,7 @@ enum SFSymbols {
     static let checkmarkCircleFill = UIImage(systemName: "checkmark.circle.fill")
     static let gearshape = UIImage(systemName: "gearshape")
     static let gearshapeFill = UIImage(systemName: "gearshape.fill")
+    static let basketFill = UIImage(systemName: "basket.fill")
+    static let fillCircle = UIImage(systemName: "largecircle.fill.circle")
+    static let circle = UIImage(systemName: "circle")
 }

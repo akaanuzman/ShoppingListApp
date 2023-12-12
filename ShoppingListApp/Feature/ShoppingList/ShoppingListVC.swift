@@ -8,7 +8,7 @@
 import UIKit
 
 final class ShoppingListVC: UIViewController {
-    private let shoppingList = ["Egg", "Fish", "Meat", "Apple", "Orange", "Chicken", "Coco Cola"]
+    private let shoppingList = ["Egg", "Fish", "Meat", "Apple", "Orange", "Chicken", "Coco Cola", "A", "B", "C", "D", "E"]
 
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController()
@@ -21,11 +21,12 @@ final class ShoppingListVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(
-            UITableViewCell.self,
-            forCellReuseIdentifier: "cell"
+            ShoppingListCell.self,
+            forCellReuseIdentifier: TableViewIdentifiers.shoppingList.rawValue
         )
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 120
         return tableView
     }()
 
@@ -49,12 +50,11 @@ final class ShoppingListVC: UIViewController {
     private func setupUI() {
         navigationItem.searchController = searchController
         view.addSubview(tableView)
-        
+
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            
         }
     }
 }
@@ -65,13 +65,15 @@ extension ShoppingListVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = shoppingList[indexPath.row]
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.shoppingList.rawValue) as! ShoppingListCell
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
 }
 
- #Preview {
+#Preview {
     ShoppingListVC()
- }
-  
+}
