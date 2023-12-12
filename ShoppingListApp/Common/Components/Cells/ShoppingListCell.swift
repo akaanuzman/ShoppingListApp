@@ -26,6 +26,22 @@ final class ShoppingListCell: UITableViewCell {
         return titleLabel
     }()
 
+    private lazy var amountSubtitleLabel: UILabel = {
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = "1 kg"
+        subtitleLabel.font = .preferredFont(forTextStyle: .subheadline)
+        subtitleLabel.textColor = .secondaryLabel
+        return subtitleLabel
+    }()
+
+    private lazy var priceSubtitleLabel: UILabel = {
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = "1 TL"
+        subtitleLabel.font = .preferredFont(forTextStyle: .subheadline)
+        subtitleLabel.textColor = .secondaryLabel
+        return subtitleLabel
+    }()
+
     private lazy var categoryView: UIButton = {
         let startButton = UIButton()
         startButton.configuration = .tinted()
@@ -35,19 +51,19 @@ final class ShoppingListCell: UITableViewCell {
         startButton.setTitle("Fruit", for: .normal)
         return startButton
     }()
-    
+
     private lazy var trailingRadioButton: UIButton = {
         let button = UIButton()
         let selectedImage = SFSymbols.fillCircle
         let unselectedImage = SFSymbols.circle
-        
+
         button.setImage(unselectedImage, for: .normal)
         button.setImage(selectedImage, for: .selected)
         button.tintColor = .systemGreen
         button.addTarget(self, action: #selector(radioButtonTapped), for: .touchUpInside)
         return button
     }()
-    
+
     @objc func radioButtonTapped() {
         trailingRadioButton.isSelected.toggle()
     }
@@ -70,11 +86,20 @@ final class ShoppingListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func configure() {
+    func configureCell(with shoppingItem: ShoppingListModel) {
+        titleLabel.text = shoppingItem.productName
+        amountSubtitleLabel.text = "\(shoppingItem.amount) \(shoppingItem.amountType)"
+        priceSubtitleLabel.text = "\(shoppingItem.money) \(shoppingItem.moneyType.rawValue)"
+        categoryView.setTitle("\(shoppingItem.category)", for: .normal)
+    }
+
+    private func configure() {
         addSubview(leadingImageView)
         addSubview(titleLabel)
+        addSubview(amountSubtitleLabel)
         addSubview(categoryView)
         addSubview(trailingRadioButton)
+        addSubview(priceSubtitleLabel)
 
         leadingImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
@@ -87,13 +112,23 @@ final class ShoppingListCell: UITableViewCell {
             make.top.equalToSuperview().offset(8)
         }
 
-        categoryView.snp.makeConstraints { make in
+        amountSubtitleLabel.snp.makeConstraints { make in
             make.leading.equalTo(leadingImageView.snp.trailing).offset(16)
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
         }
-        
+
+        categoryView.snp.makeConstraints { make in
+            make.leading.equalTo(leadingImageView.snp.trailing).offset(16)
+            make.top.equalTo(amountSubtitleLabel.snp.bottom).offset(8)
+        }
+
         trailingRadioButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-16)
+            make.centerY.equalToSuperview()
+        }
+
+        priceSubtitleLabel.snp.makeConstraints { make in
+            make.trailing.equalTo(trailingRadioButton.snp.leading).offset(-16)
             make.centerY.equalToSuperview()
         }
     }

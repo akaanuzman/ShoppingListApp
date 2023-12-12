@@ -8,8 +8,6 @@
 import UIKit
 
 final class ShoppingListVC: UIViewController {
-    private let shoppingList = ["Egg", "Fish", "Meat", "Apple", "Orange", "Chicken", "Coco Cola", "A", "B", "C", "D", "E"]
-
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController()
         searchController.searchBar.placeholder = "Search"
@@ -19,7 +17,8 @@ final class ShoppingListVC: UIViewController {
     }()
 
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: view.bounds, style: .insetGrouped)
+
         tableView.register(
             ShoppingListCell.self,
             forCellReuseIdentifier: TableViewIdentifiers.shoppingList.rawValue
@@ -45,6 +44,14 @@ final class ShoppingListVC: UIViewController {
     private func configureVC() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: SFSymbols.filter, style: .done, target: self, action: #selector(filterButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addButtonTapped)
+        )
+        navigationItem.leftBarButtonItem?.tintColor = .systemGreen
+        navigationItem.rightBarButtonItem?.tintColor = .systemGreen
     }
 
     private func setupUI() {
@@ -57,20 +64,26 @@ final class ShoppingListVC: UIViewController {
             make.edges.equalToSuperview()
         }
     }
+
+    @objc private func filterButtonTapped() {}
+    
+    @objc private func addButtonTapped() {}
 }
 
 extension ShoppingListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shoppingList.count
+        return ShoppingListModel.dummyList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewIdentifiers.shoppingList.rawValue) as! ShoppingListCell
+        let shoppingItem = ShoppingListModel.dummyList[indexPath.row]
+        cell.configureCell(with: shoppingItem)
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 120
     }
 }
 

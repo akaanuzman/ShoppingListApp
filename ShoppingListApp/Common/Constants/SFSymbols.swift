@@ -18,4 +18,5 @@ enum SFSymbols {
     static let basketFill = UIImage(systemName: "basket.fill")
     static let fillCircle = UIImage(systemName: "largecircle.fill.circle")
     static let circle = UIImage(systemName: "circle")
+    static let filter = UIImage(systemName: "line.3.horizontal.decrease.circle.fill")
 }

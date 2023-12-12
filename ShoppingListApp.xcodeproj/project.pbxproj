@@ -19,6 +19,8 @@
 		F14494092B17EC8500382587 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F14494082B17EC8500382587 /* SnapKit-Dynamic */; };
 		F16B74602B28151500F04EA5 /* ShoppingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B745F2B28151500F04EA5 /* ShoppingListCell.swift */; };
 		F16B74622B28156600F04EA5 /* TableViewIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B74612B28156600F04EA5 /* TableViewIdentifiers.swift */; };
+		F16B74682B2834E700F04EA5 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B74672B2834E700F04EA5 /* PersistenceManager.swift */; };
+		F16B746B2B283E5600F04EA5 /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B746A2B283E5600F04EA5 /* ShoppingListModel.swift */; };
 		F1B669972B17EE0B004D6BCC /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669962B17EE0B004D6BCC /* UIFont+Ext.swift */; };
 		F1B6699A2B17EF77004D6BCC /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669992B17EF77004D6BCC /* ButtonSize.swift */; };
 		F1B6699C2B17EFB4004D6BCC /* RadiusSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6699B2B17EFB4004D6BCC /* RadiusSize.swift */; };
@@ -42,6 +44,8 @@
 		F14494032B17E88500382587 /* LottieConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieConstants.swift; sourceTree = "<group>"; };
 		F16B745F2B28151500F04EA5 /* ShoppingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
 		F16B74612B28156600F04EA5 /* TableViewIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewIdentifiers.swift; sourceTree = "<group>"; };
+		F16B74672B2834E700F04EA5 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		F16B746A2B283E5600F04EA5 /* ShoppingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
 		F1B669962B17EE0B004D6BCC /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		F1B669992B17EF77004D6BCC /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
 		F1B6699B2B17EFB4004D6BCC /* RadiusSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusSize.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		F14494012B17E86F00382587 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F16B74692B283E4A00F04EA5 /* Models */,
+				F16B74662B2834C900F04EA5 /* Managers */,
 				F16B745D2B2814F200F04EA5 /* Components */,
 				F1B669982B17EF6E004D6BCC /* Size */,
 				F1B669952B17EDFE004D6BCC /* Extension */,
@@ -162,6 +168,22 @@
 				F16B745F2B28151500F04EA5 /* ShoppingListCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F16B74662B2834C900F04EA5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F16B74672B2834E700F04EA5 /* PersistenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F16B74692B283E4A00F04EA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F16B746A2B283E5600F04EA5 /* ShoppingListModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F1B669952B17EDFE004D6BCC /* Extension */ = {
@@ -304,11 +326,13 @@
 				F1B6699A2B17EF77004D6BCC /* ButtonSize.swift in Sources */,
 				F14493FB2B17E08C00382587 /* OnBoardVC.swift in Sources */,
 				F14493E02B17DFD600382587 /* AppDelegate.swift in Sources */,
+				F16B74682B2834E700F04EA5 /* PersistenceManager.swift in Sources */,
 				F14494042B17E88500382587 /* LottieConstants.swift in Sources */,
 				F16B74622B28156600F04EA5 /* TableViewIdentifiers.swift in Sources */,
 				F1B669AA2B17FC37004D6BCC /* ShoppingListVC.swift in Sources */,
 				F16B74602B28151500F04EA5 /* ShoppingListCell.swift in Sources */,
 				F1B669AE2B17FED5004D6BCC /* SFSymbols.swift in Sources */,
+				F16B746B2B283E5600F04EA5 /* ShoppingListModel.swift in Sources */,
 				F1B669A32B17FBF3004D6BCC /* TabBarVC.swift in Sources */,
 				F1B669AC2B17FC44004D6BCC /* DoneListVC.swift in Sources */,
 				F1B6699F2B17F8DE004D6BCC /* OnBoardView.swift in Sources */,
