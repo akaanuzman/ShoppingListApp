@@ -44,7 +44,12 @@ final class ShoppingListVC: UIViewController {
     private func configureVC() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: SFSymbols.filter, style: .done, target: self, action: #selector(filterButtonTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: SFSymbols.filter,
+            style: .done,
+            target: self,
+            action: #selector(filterButtonTapped)
+        )
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -66,8 +71,10 @@ final class ShoppingListVC: UIViewController {
     }
 
     @objc private func filterButtonTapped() {}
-    
-    @objc private func addButtonTapped() {}
+
+    @objc private func addButtonTapped() {
+        navigationController?.pushViewController(AddItemVC(), animated: true)
+    }
 }
 
 extension ShoppingListVC: UITableViewDelegate, UITableViewDataSource {

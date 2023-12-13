@@ -30,6 +30,7 @@
 		F1B669AA2B17FC37004D6BCC /* ShoppingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669A92B17FC37004D6BCC /* ShoppingListVC.swift */; };
 		F1B669AC2B17FC44004D6BCC /* DoneListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669AB2B17FC44004D6BCC /* DoneListVC.swift */; };
 		F1B669AE2B17FED5004D6BCC /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B669AD2B17FED5004D6BCC /* SFSymbols.swift */; };
+		F1DEEA0A2B29E8BF008C0445 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DEEA092B29E8BF008C0445 /* AddItemVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		F1B669A92B17FC37004D6BCC /* ShoppingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListVC.swift; sourceTree = "<group>"; };
 		F1B669AB2B17FC44004D6BCC /* DoneListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListVC.swift; sourceTree = "<group>"; };
 		F1B669AD2B17FED5004D6BCC /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		F1DEEA092B29E8BF008C0445 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		F14493F82B17E07900382587 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				F1DEEA082B29E8A6008C0445 /* AddItemVC */,
 				F1B669A02B17FB33004D6BCC /* TabBar */,
 				F1B669A62B17FC0F004D6BCC /* Settings */,
 				F1B669A52B17FC09004D6BCC /* DoneList */,
@@ -243,6 +246,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		F1DEEA082B29E8A6008C0445 /* AddItemVC */ = {
+			isa = PBXGroup;
+			children = (
+				F1DEEA092B29E8BF008C0445 /* AddItemVC.swift */,
+			);
+			path = AddItemVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +341,7 @@
 				F14494042B17E88500382587 /* LottieConstants.swift in Sources */,
 				F16B74622B28156600F04EA5 /* TableViewIdentifiers.swift in Sources */,
 				F1B669AA2B17FC37004D6BCC /* ShoppingListVC.swift in Sources */,
+				F1DEEA0A2B29E8BF008C0445 /* AddItemVC.swift in Sources */,
 				F16B74602B28151500F04EA5 /* ShoppingListCell.swift in Sources */,
 				F1B669AE2B17FED5004D6BCC /* SFSymbols.swift in Sources */,
 				F16B746B2B283E5600F04EA5 /* ShoppingListModel.swift in Sources */,
